@@ -1,0 +1,180 @@
+body {
+  background:peachpuff;
+}
+
+.main-container {
+  font-size:14px;
+  font-family: consolas, monospaced;
+  font-style:oblique;
+  color:grey;
+  width:800px;
+  margin:20px;
+  padding:15px;
+  border:1px solid grey;
+  background:floralwhite;
+  border-radius:10px;
+  text-align:left;
+  box-shadow:5px 6px 8px 1px black;
+  height:500px;
+}
+
+.page-header {
+  width:800px;
+  height:34px;
+  /*border:1px solid grey;*/
+}
+
+.page-body {
+  width:800px;
+  height:418px;
+  /*border:1px solid grey;*/
+  border-top:1px solid grey;
+}
+
+.page-footer {
+  width:800px;
+  height:41px;
+  /*border:1px solid grey;*/
+  border-top:1px solid grey;
+  padding-top:5px;
+}
+
+.wrong-label {
+  background:url('../img/wrong.png');
+}
+
+.right-label {
+  background:url('../img/right.png');
+}
+
+.wrong-label , .right-label{
+  background-repeat:no-repeat;
+  width:50px;
+  height:30px;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:15px;
+  padding-right:15px;
+  border:1px solid grey;
+  box-shadow:1px 1px 1px 0px;
+}
+
+.text-label {
+  color:grey;
+  font-size:15px;
+  font-weight:bold;
+}
+
+.text-box {
+  color:grey;
+  font-size:13px;
+  font-weight:bold;
+  font-style:oblique;
+}
+
+.no-button {
+  background:sandybrown;
+  color:white;
+}
+
+.ok-button {
+  color:grey;
+  background:ghostwhite;
+}
+
+.ok-button, .no-button {
+  font-size:15px;
+  font-weight:bold;
+  font-family:consolas, monospaced;
+  font-style:oblique;
+  border:1px solid grey;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:14px;
+  padding-right:14px;
+  box-shadow:1px 1px 1px 0px;
+  cursor:pointer;
+}
+
+.ok-button:hover {
+  background:snow;
+}
+
+.no-button:hover {
+  background:orange;
+}
+
+.ok-button:active {
+  box-shadow:0px 0px 1px 0px;
+}
+
+.no-button:active {
+  box-shadow:0px 0px 1px 0px;
+}
+
+.note-label {
+  color:blue;
+  font-size:15px;
+  font-weight:bold;
+}
+
+.error-label {
+  color:red;
+  font-size:15px;
+  font-weight:bold;
+}
+
+.qsn-div {
+  width:800px;
+  height:136px;
+  /*border:1px solid grey;*/
+  border-bottom:1px solid grey;
+  overflow:auto;
+}
+
+.ans-div {
+  width:800px;
+  height:278px;
+  /*border:1px solid grey;*/
+  overflow:auto;
+}
+
+.attempted {
+  background:skyblue;
+  color:white;
+}
+
+.not-attempted {
+  background:yellow;
+  color:black;
+}
+
+.attempted , .not-attempted{
+  font-size:15px;
+  font-weight:bold;
+  font-family:consolas, monospaced;
+  font-style:oblique;
+  border:1px solid grey;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:14px;
+  padding-right:14px;
+  box-shadow:1px 1px 1px 0px;
+  cursor:pointer;
+}
+
+.attempted:hover {
+  box-shadow:1px 1px 0px 0px;
+}
+
+.not-attempted {
+  box-shadow:1px 1px 0px 0px;
+}
+
+.info-div {
+  text-align:left;
+  line-height:40px;
+}
+.info-div span {
+  margin:10px;
+}
