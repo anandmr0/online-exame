@@ -9,6 +9,24 @@
 <link rel="stylesheet" type="text/css" href="formcss.css" />
 <!-- modernizr enables HTML5 elements and feature detects -->
 <script type="text/javascript" src="modernizr-1.5.min.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+    document.getElementById("password").onchange = validatePassword;
+    document.getElementById("password_confrim").onchange = validatePassword;
+    document.getElementById("fullname").onchange = validateName;
+}
+function validatePassword(){
+var pass1=document.getElementById("password").value;
+var pass2=document.getElementById("password_confrim").value;
+if(pass2==pass1)
+    document.getElementById("password_confrim").setCustomValidity('');
+else
+     
+    document.getElementById("password_confrim").setCustomValidity("Passwords Don't Match"); 
+//empty string means no validation error
+}
+
+</script>
 </head>
 
 <body style="background-image: url('wilson.jpg')">
@@ -38,7 +56,7 @@
 <li>
 <a href="#">Conduct Exam</a>
 <ul>
-<li><a href="#">Add Paper</a></li>
+<li><a href="addpaper.jsp">Add Paper</a></li>
 <li><a href="#">Modify Paper</a></li>
 <li><a href="#">Delete Paper</a></li>
 </ul>
@@ -47,7 +65,7 @@
 <a href="#">Results</a>
 <ul>
 <li><a href="#">Practice Test Result</a></li>
-<li><a href="#">Final Test Result</a></li>  
+<li><a href="finalresult.jsp">Final Test Result</a></li>  
 </ul>
 </li>
 
@@ -90,7 +108,7 @@ The institutes also provide a list of students that are eligible for the exam.</
 <ol>
 <li>
 <label for="institutename">Institute Name *</label> 
-<input type="text" id="institutename" name="institutename" placeholder="institute name" required />
+<input type="text" id="institutename" name="institutename" placeholder="institute name" pattern=".{7,}" required title="Please Enter Full Institute Name" />
 </li>
 <li>
 <label for="email">Email *</label> 
@@ -108,7 +126,7 @@ The institutes also provide a list of students that are eligible for the exam.</
 <ol>		
 <li>
 <label for="loginname">Login Name *</label>
-<input id="username" name="loginname" type="text" pattern="\w{4,}" placeholder="Atleast 4 alphanumeric characters" required />
+<input id="username" name="loginname" type="text" pattern=".{4,}" placeholder="Atleast 4 alphanumeric characters" required />
 </li>
 <li>
 <label for="password">Password *</label>
@@ -119,8 +137,14 @@ The institutes also provide a list of students that are eligible for the exam.</
 </p>
 </li>
 <li>
-    
+<label for="password_confrim">Confirm Your Password *</label>
+<input id="password_confrim" name="password_confrim" type="password" title="Minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required /> 
+<p class="validation01">
+<span class="invalid">Minimum 8 characters, one number, one uppercase letter and one lowercase letter</span>
+<span class="valid">Your password meets our requirements, thank you.</span>
+</p>
 </li>
+
 </ol>
 
 </fieldset>

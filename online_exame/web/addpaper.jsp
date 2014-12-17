@@ -38,7 +38,7 @@
 <li>
 <a href="#">Conduct Exam</a>
 <ul>
-<li><a href="#">Add Paper</a></li>
+<li><a href="addpaper.jsp">Add Paper</a></li>
 <li><a href="#">Modify Paper</a></li>
 <li><a href="#">Delete Paper</a></li>
 </ul>
@@ -47,7 +47,7 @@
 <a href="#">Results</a>
 <ul>
 <li><a href="#">Practice Test Result</a></li>
-<li><a href="#">Final Test Result</a></li>  
+<li><a href="finalresult.jsp">Final Test Result</a></li>  
 </ul>
 </li>
 
@@ -86,7 +86,7 @@ The institutes also provide a list of students that are eligible for the exam.</
 <li><img width="706" height="270" src="pencils.jpg" alt="image three" /></li>
 </ul>
 <form id="signup">
-<h1>WELCOME TO ONLINE EXAM</h1>
+<h1 align="center">SET EXAM PAPER</h1>
 
 <h1>Fields marked (*) are required</h1>
 
@@ -100,38 +100,94 @@ The institutes also provide a list of students that are eligible for the exam.</
 </li>
 <li>
 <label for="email">Institute/Organization Login Name *</label> 
-<input type="email" id="email" name="email" placeholder="e.g. ryan@example.net" title="Please enter a valid email" required />
+<input type="text" id="email" name="email" placeholder="Login Name" title="Please enter a valid email" required />
 <p class="validation01">
-<span class="invalid">Please enter a valid email address e.g. ryan@example.com</span>
+<span class="invalid">Please enter a valid Login Name</span>
 <span class="valid">Thank you for entering a valid email</span>
 </p>
 </li>
-
-</ol>
-</fieldset>
-<fieldset>
-<legend>Student Details</legend>
-<ol>		
-<li>
-<label for="username">Your Username *</label>
-<input id="username" name="username" type="text" pattern="\w{4,}" placeholder="Atleast 4 alphanumeric characters" required />
-</li>
 <li>
 <label for="password">Password *</label>
-<input id="password" name="password" type="password" title="Minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required /> 
+<input id="password" name="password" type="password" title="Minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required="" placeholder="Password"/> 
 <p class="validation01">
 <span class="invalid">Minimum 8 characters, one number, one uppercase letter and one lowercase letter</span>
 <span class="valid">Your password meets our requirements, thank you.</span>
 </p>
 </li>
+
+
+</ol>
+</fieldset>
+<fieldset>
+<legend>Paper Details</legend>
+<ol>
+  <li>
+<label for="sectionname">Section Name *</label> 
+<input type="text" id="sectionname" name="sectionname" placeholder="e.g:Aptitute" required="" />
+</li>
+<li>
+<label for="examname">Exam Name *</label> 
+<input type="text" id="examname" name="examname" placeholder="e.g: Java" required="" />
+</li>
+<li>
+<label for="mask">Marks Per Question*</label> 
+<input type="text" id="marks" name="marks" placeholder="Mask Per Question" required="" />
+</li>
+<li>
+<label for="passmask"> Passing Marks *</label> 
+<input type="text" id="passmask" name="passmarks" placeholder="Passing Marks" required="" />
+</li>
+<li>
+<label for="duration">Exam Duration*</label> 
+<input type="text" id="duration" name="duration" placeholder="e.g: 30 Min" required="Duration must be in Min" />
+</li>
+<li>
+<label for="negative">Negative Marking(Optional) </label> 
+<input type="text" id="negative" name="negative" placeholder="e.g:-2"/>
+</li>
 <li>
     
+</li>
+</ol>
+</fieldset>
+<fieldset>
+<legend>Question Details</legend>
+<ol>		
+<li>
+<label for="question">Question(Q1) *</label> 
+<textarea id="question" name="question" required="" placeholder="Question"></textarea>
+</li>
+</ol>
+
+</fieldset>
+<fieldset>
+<legend>Answer Details</legend>
+<ol>		
+<li>
+<label for="a">A *</label> 
+<input type="text" id="a" name="a" required="" placeholder="First Answar" height="10"/>
+</li>
+<li>
+<label for="b">B *</label> 
+<input type="text" id="b" name="b" required="" placeholder="Second Answar" height="10"/>
+<li>
+<label for="c">C *</label> 
+<input type="text" id="c" name="c" required="" placeholder="Third Answar" height="10"/>
+</li>
+<li>
+<label for="d">D *</label> 
+<input type="text" id="d" name="d" required="" placeholder="Forth Answar" height="10"/>
+</li>
+<li>
+    <label for="correctanswer">Correct Answer *</label> 
+<input type="text" id="correctanswer" name="correctanswer" required="" placeholder="Correct Answer" height="10"/>
 </li>
 </ol>
 
 </fieldset>
 
-<input type="submit" value="Give Exam" style="background-color: #4b8df9; height: 30px; width: 65px;" />
+<input type="submit" value="Save" style="background-color: #4b8df9; height: 30px; width: 65px;" />
+<input type="submit" value="Save Exam " style="background-color: #4b8df9; height: 30px; width: 75px;" />
 <input type="reset" value="Clear" style="background-color: #4b8df9;height: 30px; width: 65px;"/>
 
 </form>

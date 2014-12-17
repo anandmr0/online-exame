@@ -9,6 +9,24 @@
 <link rel="stylesheet" type="text/css" href="formcss.css" />
 <!-- modernizr enables HTML5 elements and feature detects -->
 <script type="text/javascript" src="modernizr-1.5.min.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+    document.getElementById("password").onchange = validatePassword;
+    document.getElementById("password_confrim").onchange = validatePassword;
+    document.getElementById("fullname").onchange = validateName;
+}
+function validatePassword(){
+var pass1=document.getElementById("password").value;
+var pass2=document.getElementById("password_confrim").value;
+if(pass2==pass1)
+    document.getElementById("password_confrim").setCustomValidity('');
+else
+     
+    document.getElementById("password_confrim").setCustomValidity("Passwords Don't Match"); 
+//empty string means no validation error
+}
+
+</script>
 </head>
 
 <body style="background-image: url('wilson.jpg')">
@@ -38,7 +56,7 @@
 <li>
 <a href="#">Conduct Exam</a>
 <ul>
-<li><a href="#">Add Paper</a></li>
+<li><a href="addpaper.jsp">Add Paper</a></li>
 <li><a href="#">Modify Paper</a></li>
 <li><a href="#">Delete Paper</a></li>
 </ul>
@@ -47,7 +65,7 @@
 <a href="#">Results</a>
 <ul>
 <li><a href="#">Practice Test Result</a></li>
-<li><a href="#">Final Test Result</a></li>  
+<li><a href="finalresult.jsp">Final Test Result</a></li>  
 </ul>
 </li>
 
@@ -90,7 +108,7 @@ The institutes also provide a list of students that are eligible for the exam.</
 <ol>
 <li>
 <label for="fullname">Name *</label> 
-<input type="text" id="fullname" name="fullname" placeholder="Full name" required />
+<input type="text" id="fullname" name="fullname" placeholder="Full name" pattern=".{7,}" required title="Please Enter Full Name" />
 </li>
 <li>
 <label for="email">Email *</label> 
@@ -116,7 +134,7 @@ The institutes also provide a list of students that are eligible for the exam.</
 <ol>
 <li>
 <label for="address">Address *</label>
-<input id="address" name="address" type="text" required />
+<input id="address" name="address" type="text"  required="" />
 </li>
 <li>
 <label for="suburb">City *</label>
@@ -124,9 +142,9 @@ The institutes also provide a list of students that are eligible for the exam.</
 </li>
 <li>
 <label for="postcode">Post code *</label>
-<input id="postcode" name="postcode" type="number" min="1001" max="8000" maxlength="4" required />
+<input id="postcode" name="postcode" type="number" min="1001" max="800000" maxlength="6" required />
 <p class="validation01">
-<span class="invalid">Your postcode is out of range between 1001 - 8000</span>
+<span class="invalid">Your postcode must follow the pattern e.g 401105</span>
 <span class="valid">Thank you your postcode is in the correct range</span>
 </p>
 </li>
@@ -152,12 +170,18 @@ The institutes also provide a list of students that are eligible for the exam.</
 <legend>Membership information</legend>
 <ol>		
 <li>
-<label for="username">Username *</label>
-<input id="username" name="username" type="text" pattern="\w{4,}" placeholder="Atleast 4 alphanumeric characters" required />
+<label for="loginname">Login Name *</label>
+<input id="loginname" name="loginname" type="text" pattern="\w{4,}" placeholder="Atleast 4 alphanumeric characters" required />
 </li>
 <li>
 <label for="password">Password *</label>
 <input id="password" name="password" type="password" title="Minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required /> 
+<p class="validation01">
+<span class="invalid">Minimum 8 characters, one number, one uppercase letter and one lowercase letter</span>
+<span class="valid">Your password meets our requirements, thank you.</span>
+</p>
+<label for="password_confrim">Confirm Your Password *</label>
+<input id="password_confrim" name="password_confrim" type="password" title="Minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required /> 
 <p class="validation01">
 <span class="invalid">Minimum 8 characters, one number, one uppercase letter and one lowercase letter</span>
 <span class="valid">Your password meets our requirements, thank you.</span>

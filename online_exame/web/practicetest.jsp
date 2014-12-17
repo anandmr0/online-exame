@@ -1,64 +1,44 @@
-<%-- 
-    Document   : home
-    Created on : Nov 30, 2014, 10:23:44 AM
-    Author     : anand
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
-    <head>
-        <link href="drop.css" type="text/css" rel="stylesheet"/>
-       
-        <style>
-h3 {color:bootlegreen;font:700 12pt arial}
-body {font:10pt verdana}
-td{font:10pt verdana}
-a {font:700 12pt verdana;color:green}
-p {font: 50 12pt verdana;color: red}
-h2 {font:700 16pt arial;color:bootlegreen}
-</style>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body leftmargin=0  bottomMargin=0 aLink=#f0f0f0 rightMargin=90 link=#f0f0f0
- bgColor=#98afc7 vLink=#f0f0f0 
-topmargin=0 class="adobe-com">
-        <TABLE border=0 cellSpacing=0 cellPadding=0 width="100%">
-<TR>
-<TD vAlign=top align=middle>
-        
-        <table border=0 cellSpacing=0 cellPadding=0 width=50% bgColor=#4e9258 >
-            <tr>
-                <td><div id="div1" style="background-image:url(logo.gif);height: 90px;width: 88px;"/>
-                </td></div>
-                <td>
-                    <div><img src="banner.jpg" height="90" width="900"/></div>
-                </td></tr>
-        </table>
-    
-        <div id="nav" style="height:50px;width: 988px;">
-	<div id="nav_wraper">
-<ul align=left>
-<li><a href="home.jsp">home</a></li><li>
-<a href="#">Registration</a>
+
+<head>
+<title>HOME</title>
+<meta name="description" content="website description" />
+<meta name="keywords" content="website keywords, website keywords" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style2.css" />
+<link rel="stylesheet" type="text/css" href="formcss.css" />
+<!-- modernizr enables HTML5 elements and feature detects -->
+<script type="text/javascript" src="modernizr-1.5.min.js"></script>
+</head>
+
+<body style="background-image: url('wilson.jpg')">
+<div id="main">
+<header>
+
+<!-- class="logo_colour", allows you to change the colour of the text -->
+<h2 align="center"><font color="black"><u>ONLINE TEST ENGINE</u></font></h2>
+
+<nav>
+<ul class="sf-menu" id="nav">
+<li><a href="home.html">Home</a></li>
+<li><a href="#">Registration</a>
 <ul>
 <li><a href="studentRegistration.jsp">Student</a></li>
 <li><a href="instituteRegistration.jsp">Institute</a></li>
 <li><a href="organizationRegistration.jsp">Organization</a></li>
 </ul>
 </li>
-<li>
-<a href="#">Online Exam</a>
+<li><a href="#">Online Exam</a>
 <ul>
- <li><a href="practicetest.jsp">Practice Test</a></li>
- <li><a href="finaltest.jsp">Final Test</a></li>  
+<li><a href="practicetest.jsp">Practice Test</a></li>
+<li><a href="finaltest.jsp">Final Test</a></li>  
 </ul>
+
 </li>
 <li>
 <a href="#">Conduct Exam</a>
 <ul>
-<li><a href="#">Add Paper</a></li>
+<li><a href="addpaper.jsp">Add Paper</a></li>
 <li><a href="#">Modify Paper</a></li>
 <li><a href="#">Delete Paper</a></li>
 </ul>
@@ -66,52 +46,117 @@ topmargin=0 class="adobe-com">
 <li>
 <a href="#">Results</a>
 <ul>
- <li><a href="#">Practice Test Result</a></li>
- <li><a href="#">Online Test Result</a></li>  
+<li><a href="#">Practice Test Result</a></li>
+<li><a href="finalresult.jsp">Final Test Result</a></li>  
 </ul>
 </li>
-<li><a href="#">About Us</a>
-</li>
+
 <li><a href="#">Contact Us</a>
 </li>
-<li><a href="index.jsp">Logout</a>
+<li><a href="index.html">Logout</a>
 </li>
 </ul>
+</nav>
+</header>
+   
+    <div id="site_content">
+<div id="sidebar_container">
+<div class="sidebar">
+<h1>Latest News</h1>
+<h1>New Website Launched</h1>
+<p>We've designed our own website. Take a look around and let us know what you think.</p>
+</div>
+<div class="sidebar">
+<h1>About Us</h1>
+<h1>How is this site helpful to institutes/Organization?</h1>
+<p>This site is a medium by which institutes/Organizations can conduct online exams.
+They can register on the site and then can enter the exam details and questions.
+The institutes also provide a list of students that are eligible for the exam.</p>
+<p>.</p>
+</div>
+<div class="sidebar">
+<h1>Contact Us</h1>
+<p>We'd love to hear from you. Call us, <a href="#">email us</a> or complete our <a href="contact.php">contact form</a>.</p>
 </div>
 </div>
-    <div style="background-image: url('bgnoise_lg.png') ;height: 540px;width: 988px">
-      <div style="background-color: whitesmoke; height:70%;width: 550px">
-      <table align="center" >
-          
-          <tr>
-              <td style="font-size:15px;"><b>PRACTICE TEST</b></td>
-          </tr>
-          <form action="#" method="post">
-          <tr><td><br></td></tr>
-          
-          <tr><td><label for="email">Email ID:</label></td>
-              <td><input id="email" type="email" placeholder="example@domain.com" required="" /></td>
-          </tr>
-          
-          <tr><td><br></td></tr>
-          <tr><td><label for="password">Password:</label></td>
-              <td><input id="password" name="password" required="" type="password" /></td></tr>
-          <tr><td><br></td></tr>
-          
-         <tr><td><br></td></tr>
-          <tr><td align="center"><input class="buttom" name="submit" id="submit" tabindex="9" value="Register" type="submit"></td>
-              <td align="center"><input class="buttom" name="submit" id="submit" tabindex="10" value="Reset" type="reset"> </td>
-          </tr>
-          </form>
-      </table>
-      </div></div>
+<div id="content">
+<ul class="slideshow">
+<li class="show"><img width="706" height="270" src="study.jpg" alt="image one" /></li>
+<li><img width="706" height="270" src="mathproblem_3.jpg" alt="image two" /></li>
+<li><img width="706" height="270" src="pencils.jpg" alt="image three" /></li>
+</ul>
+<form id="signup">
+<h1>PRACTICE TEST</h1>
 
-        
-    
+<h1>Fields marked (*) are required</h1>
 
+<fieldset>
+<legend>Institute/Organization details</legend>
+
+<ol>
+<li>
+<label for="IOname">Institute/Organization Name *</label> 
+<input type="text" id="institutename" name="ioname" placeholder="Institute/Organization name" required />
+</li>
+<li>
+<label for="email">Institute/Organization Login Name *</label> 
+<input type="email" id="email" name="email" placeholder="Login Name" title="Please enter a valid email" required />
+<p class="validation01">
+<span class="invalid">Please enter a valid Login Name</span>
+<span class="valid">Thank you for entering a valid email</span>
+</p>
+</li>
+<li>
+<label for="sname">Subject Name *</label> 
+<input type="text" id="sname" name="sname" placeholder="e.g: Java" required="" />
+</li>
+
+</ol>
+</fieldset>
+<fieldset>
+<legend>Student Details</legend>
+<ol>		
+<li>
+<label for="username">Your Login name *</label>
+<input id="username" name="username" type="text" pattern=".{4,}" placeholder="Login Name" required="Enter Valid Login Name" />
+</li>
+<li>
+<label for="password">Password *</label>
+<input id="password" name="password" type="password" title="Minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required /> 
+<p class="validation01">
+<span class="invalid">Minimum 8 characters, one number, one uppercase letter and one lowercase letter</span>
+<span class="valid">Your password meets our requirements, thank you.</span>
+</p>
+</li>
+<li>
     
-</td>
-</tr>
-        </table>
-    </body>
+</li>
+</ol>
+
+</fieldset>
+
+<input type="submit" value="Result" style="background-color: #4b8df9; height: 30px; width: 65px;" />
+<input type="reset" value="Clear" style="background-color: #4b8df9;height: 30px; width: 65px;"/>
+
+</form>
+</div>
+</div>
+<footer>
+<p><a href="index.html">Home</a>  | <a href="about.html">About Us</a> | <a href="contact.html">Contact Us</a></p>
+<p>Copyright &copy;Online Test Engine |Design by Anand maurya</p>
+</footer>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<!-- javascript at the bottom for fast page loading -->
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.easing-sooper.js"></script>
+<script type="text/javascript" src="jquery.sooperfish.js"></script>
+<script type="text/javascript" src="image_fade.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$('ul.sf-menu').sooperfish();
+});
+</script>
+</body>
 </html>

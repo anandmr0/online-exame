@@ -9,24 +9,6 @@
 <link rel="stylesheet" type="text/css" href="formcss.css" />
 <!-- modernizr enables HTML5 elements and feature detects -->
 <script type="text/javascript" src="modernizr-1.5.min.js"></script>
-<script type="text/javascript">
-window.onload = function () {
-    document.getElementById("password").onchange = validatePassword;
-    document.getElementById("password_confrim").onchange = validatePassword;
-    document.getElementById("fullname").onchange = validateName;
-}
-function validatePassword(){
-var pass1=document.getElementById("password").value;
-var pass2=document.getElementById("password_confrim").value;
-if(pass2==pass1)
-    document.getElementById("password_confrim").setCustomValidity('');
-else
-     
-    document.getElementById("password_confrim").setCustomValidity("Passwords Don't Match"); 
-//empty string means no validation error
-}
-
-</script>
 </head>
 
 <body style="background-image: url('wilson.jpg')">
@@ -97,36 +79,46 @@ The institutes also provide a list of students that are eligible for the exam.</
 <p>We'd love to hear from you. Call us, <a href="#">email us</a> or complete our <a href="contact.php">contact form</a>.</p>
 </div>
 </div>
+<div id="content">
+<ul class="slideshow">
+<li class="show"><img width="706" height="270" src="study.jpg" alt="image one" /></li>
+<li><img width="706" height="270" src="mathproblem_3.jpg" alt="image two" /></li>
+<li><img width="706" height="270" src="pencils.jpg" alt="image three" /></li>
+</ul>
 <form id="signup">
-<h1>ORGANIZATION REGISTRATION</h1>
+<h1>FINAL TEST</h1>
 
 <h1>Fields marked (*) are required</h1>
 
 <fieldset>
-<legend>Organization details</legend>
+<legend>Institute/Organization details</legend>
 
 <ol>
 <li>
-<label for="organizationname">Organization Name *</label> 
-<input type="text" id="oorganizationname" name="Organizationname" placeholder="Organization name" pattern=".{7,}" required title="Please Enter Full Organization Name" />
+<label for="IOname">Institute/Organization Name *</label> 
+<input type="text" id="institutename" name="ioname" placeholder="Institute/Organization name" required />
 </li>
 <li>
-<label for="email">Email *</label> 
-<input type="email" id="email" name="email" placeholder="e.g. ryan@example.net" title="Please enter a valid email" required />
+<label for="email">Institute/Organization Login Name *</label> 
+<input type="email" id="email" name="email" placeholder="Login Name" title="Please enter a valid email" required />
 <p class="validation01">
-<span class="invalid">Please enter a valid email address e.g. ryan@example.com</span>
+<span class="invalid">Please enter a valid Login Name</span>
 <span class="valid">Thank you for entering a valid email</span>
 </p>
+</li>
+<li>
+<label for="sname">Subject Name *</label> 
+<input type="text" id="sname" name="sname" placeholder="e.g: Java" required="" />
 </li>
 
 </ol>
 </fieldset>
 <fieldset>
-<legend>Membership information</legend>
+<legend>Student Details</legend>
 <ol>		
 <li>
-<label for="loginname">Login name *</label>
-<input id="username" name="loginname" type="text" pattern="\w{4,}" placeholder="Atleast 4 alphanumeric characters" required />
+<label for="username">Your Login name *</label>
+<input id="username" name="username" type="text" pattern=".{4,}" placeholder="Login Name" required="Enter Valid Login Name" />
 </li>
 <li>
 <label for="password">Password *</label>
@@ -137,23 +129,16 @@ The institutes also provide a list of students that are eligible for the exam.</
 </p>
 </li>
 <li>
-<label for="password_confrim">Confirm Your Password *</label>
-<input id="password_confrim" name="password_confrim" type="password" title="Minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required /> 
-<p class="validation01">
-<span class="invalid">Minimum 8 characters, one number, one uppercase letter and one lowercase letter</span>
-<span class="valid">Your password meets our requirements, thank you.</span>
-</p>
+    
 </li>
 </ol>
 
 </fieldset>
 
-<input type="submit" value="Register" style="background-color: #4b8df9; height: 30px; width: 65px;" />
+<input type="submit" value="Give Exam" style="background-color: #4b8df9; height: 30px; width: 65px;" />
 <input type="reset" value="Clear" style="background-color: #4b8df9;height: 30px; width: 65px;"/>
 
 </form>
-        
-</div>
 </div>
 </div>
 <footer>

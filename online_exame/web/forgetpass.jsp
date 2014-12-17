@@ -56,62 +56,22 @@ else
 <div id="wrapper">
 <div id="login" class="animate form">
     <form  action="home.html" autocomplete="on" method="post"> 
-<h1>Log in</h1> 
 <p> 
-<label for="username" class="uname" data-icon="" > Your email or username </label>
+<label for="fullname" class="uname" data-icon="" >Enter Full Name </label>
+<input id="fullname" name="fullname" required="" type="text" placeholder="Full Name"/>
+</p>
+<p> 
+<label for="username" class="uname" data-icon="" > Your Email ID </label>
 <input id="username" name="username" required="" type="email" placeholder="mymail@mail.com"/>
 </p>
-<p> 
-<label for="password" class="youpasswd" data-icon=""> Your password </label>
-<input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
-</p>
-<p class="keeplogin"> 
-<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
-<label for="loginkeeping">Keep me logged in</label>
-</p>
-<p class="keeplogin"> 
-
-<label for="loginkeeping"><a href="forgetpass.jsp">Forget Password?</a></label></p>
 <p class="login button"> 
-<input type="submit" value="Login" /> 
+<input type="submit" value="Submit" /> 
 </p>
-<p class="change_link">
-Not a member yet ?
-<a href="#toregister" class="to_register">SIngUP</a>
-</p>
-
 </form>
 
 </div>
 
-<div id="register" class="animate form">
-<form  action="" autocomplete="on"> 
-<h1> Sign up </h1> 
-<p> 
-<label for="fullname" class="uname" data-icon="">Full Name</label>
-<input id="fullname" name="fullname" required="required" type="text" placeholder="Full Name" pattern=".{7,}" required title="Please Enter Full name"/>
-</p>
-<p> 
-<label for="emailsignup" class="youmail" data-icon="" > Your email</label>
-<input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="mysupermail@mail.com"/> 
-</p>
-<p> 
-<label for="passwordsignup" class="youpasswd" data-icon="">Your password </label>
-<input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder=""/>
-</p>
-<p> 
-<label for="passwordsignup_confirm" class="youpasswd" data-icon="">Please confirm your password </label>
-<input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder=""/>
-</p>
-<p class="signin button"> 
-<input type="submit" value="Sign up"/> 
-</p>
-<p class="change_link">  
-Already a member ?
-<a href="#tologin" class="to_register"> Go and log in </a>
-</p>
-</form>
-</div>
+
 
 </div>
 
