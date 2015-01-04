@@ -34,7 +34,7 @@ else
 <header>
 
 <!-- class="logo_colour", allows you to change the colour of the text -->
-<h2 align="center"><font color="black"><u>ONLINE TEST ENGINE</u></font></h2>
+<div id="headertitle">Online Test Engine</div>
 
 <nav>
 <ul class="sf-menu" id="nav">
@@ -97,7 +97,7 @@ The institutes also provide a list of students that are eligible for the exam.</
 <p>We'd love to hear from you. Call us, <a href="#">email us</a> or complete our <a href="contact.php">contact form</a>.</p>
 </div>
 </div>
-<form id="signup">
+        <form id="signup" action="studentregistrationdata.jsp">
 <h1>STUDENT REGISTRATION</h1>
 
 <h1>Fields marked (*) are required</h1>
@@ -107,7 +107,7 @@ The institutes also provide a list of students that are eligible for the exam.</
 
 <ol>
 <li>
-<label for="fullname">Name *</label> 
+<label for="fullname">Full Name *</label> 
 <input type="text" id="fullname" name="fullname" placeholder="Full name" pattern=".{7,}" required title="Please Enter Full Name" />
 </li>
 <li>
@@ -137,12 +137,12 @@ The institutes also provide a list of students that are eligible for the exam.</
 <input id="address" name="address" type="text"  required="" />
 </li>
 <li>
-<label for="suburb">City *</label>
-<input id="suburb" name="suburb" type="text" required />
+<label for="city">City *</label>
+<input id="city" name="city" type="text" required />
 </li>
 <li>
-<label for="postcode">Post code *</label>
-<input id="postcode" name="postcode" type="number" min="1001" max="800000" maxlength="6" required />
+<label for="pincode">Pin code *</label>
+<input id="pincode" name="pincode" type="number" min="1001" max="800000" maxlength="6" required />
 <p class="validation01">
 <span class="invalid">Your postcode must follow the pattern e.g 401105</span>
 <span class="valid">Thank you your postcode is in the correct range</span>

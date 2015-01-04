@@ -20,13 +20,16 @@
 window.onload = function () {
     document.getElementById("passwordsignup").onchange = validatePassword;
     document.getElementById("passwordsignup_confirm").onchange = validatePassword;
-    document.getElementById("fullname").onchange = validateName;
+    document.getElementById("emailsignup").onchange = validatePassword;
 }
 function validatePassword(){
 var pass1=document.getElementById("passwordsignup").value;
 var pass2=document.getElementById("passwordsignup_confirm").value;
+
 if(pass2==pass1)
+{
     document.getElementById("passwordsignup_confirm").setCustomValidity('');
+
 else
      
     document.getElementById("passwordsignup_confirm").setCustomValidity("Passwords Don't Match"); 
@@ -45,7 +48,7 @@ else
 <div class="clr"></div>
 </div><!--/ Codrops top bar -->
 <header>
-    <h2><font color="black"><u>ONLINE TEST ENGINE</u></font></h2>
+    <div id="header">Online Test Engine</div>
 
 </header>
 <section>				
@@ -55,7 +58,7 @@ else
 <a class="hiddenanchor" id="tologin"></a>
 <div id="wrapper">
 <div id="login" class="animate form">
-    <form  action="home.html" autocomplete="on" method="post"> 
+    <form  action="login.jsp" autocomplete="on"  name="login"> 
 <h1>Log in</h1> 
 <p> 
 <label for="username" class="uname" data-icon="" > Your email or username </label>
@@ -85,7 +88,7 @@ Not a member yet ?
 </div>
 
 <div id="register" class="animate form">
-<form  action="" autocomplete="on"> 
+    <form  action="singup.jsp" autocomplete="on"> 
 <h1> Sign up </h1> 
 <p> 
 <label for="fullname" class="uname" data-icon="">Full Name</label>

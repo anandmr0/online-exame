@@ -85,57 +85,66 @@ The institutes also provide a list of students that are eligible for the exam.</
 <li><img width="706" height="270" src="mathproblem_3.jpg" alt="image two" /></li>
 <li><img width="706" height="270" src="pencils.jpg" alt="image three" /></li>
 </ul>
-<form id="signup">
-<h1>PRACTICE TEST</h1>
+<form id="signup" action="http://localhost:8080/online_exame/organization_question" method="post" >
+<h1 align="center">SET EXAM PAPER</h1>
 
 <h1>Fields marked (*) are required</h1>
 
 <fieldset>
-<legend>Institute/Organization details</legend>
+<legend></legend>
 
 <ol>
-<li>
-<label for="IOname">Institute/Organization Name *</label> 
-<input type="text" id="institutename" name="ioname" placeholder="Institute/Organization name" required />
+<fieldset>
+<legend>Question Details</legend>
+<ol>
+    <li>
+<label for="rnumber">Registration No *</label> 
+<input type="text" id="rnumber" name="rnumber" placeholder="Registration no" title="Please enter a valid Registration no" required />
 </li>
 <li>
-<label for="email">Institute/Organization Login Name *</label> 
-<input type="email" id="email" name="email" placeholder="Login Name" title="Please enter a valid email" required />
-<p class="validation01">
-<span class="invalid">Please enter a valid Login Name</span>
-<span class="valid">Thank you for entering a valid email</span>
-</p>
+<label for="examname">Exam Name *</label> 
+<input type="text" id="examname" name="examname" placeholder="e.g: Java" required="" />
 </li>
 <li>
-<label for="sname">Subject Name *</label> 
-<input type="text" id="sname" name="sname" placeholder="e.g: Java" required="" />
+<label for="question_no">Question No *</label> 
+<input type="text" id="question_no" name="question_no" placeholder="e.g: 1" required="" />
 </li>
-
+<li>
+<label for="question">Question *</label> 
+<textarea id="question" name="question" required="" placeholder="Question"></textarea>
+</li>
 </ol>
+
 </fieldset>
 <fieldset>
-<legend>Student Details</legend>
+<legend>Answer Details</legend>
 <ol>		
 <li>
-<label for="username">Your Login name *</label>
-<input id="username" name="username" type="text" pattern=".{4,}" placeholder="Login Name" required="Enter Valid Login Name" />
+<label for="a">A *</label> 
+<input type="text" id="a" name="a" required="" placeholder="First Answar" height="10"/>
 </li>
 <li>
-<label for="password">Password *</label>
-<input id="password" name="password" type="password" title="Minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required /> 
-<p class="validation01">
-<span class="invalid">Minimum 8 characters, one number, one uppercase letter and one lowercase letter</span>
-<span class="valid">Your password meets our requirements, thank you.</span>
-</p>
+<label for="b">B *</label> 
+<input type="text" id="b" name="b" required="" placeholder="Second Answar" height="10"/>
+<li>
+<label for="c">C *</label> 
+<input type="text" id="c" name="c" required="" placeholder="Third Answar" height="10"/>
 </li>
 <li>
-    
+<label for="d">D *</label> 
+<input type="text" id="d" name="d" required="" placeholder="Forth Answar" height="10"/>
+</li>
+<li>
+    <label for="correctanswer">Correct Answer *</label> 
+<input type="text" id="correctanswer" name="correctanswer" required="" placeholder="Correct Answer" height="10"/>
 </li>
 </ol>
 
 </fieldset>
 
-<input type="submit" value="Result" style="background-color: #4b8df9; height: 30px; width: 65px;" />
+<input type="submit" value="Add Question" style="background-color: #4b8df9; height: 30px; width: 90px;" />
+
+<input type="submit" value="Save Exam " style="background-color: #4b8df9; height: 30px; width: 75px;" />
 <input type="reset" value="Clear" style="background-color: #4b8df9;height: 30px; width: 65px;"/>
 
 </form>

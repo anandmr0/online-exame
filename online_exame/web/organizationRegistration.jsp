@@ -34,7 +34,7 @@ else
 <header>
 
 <!-- class="logo_colour", allows you to change the colour of the text -->
-<h2 align="center"><font color="black"><u>ONLINE TEST ENGINE</u></font></h2>
+<div id="headertitle">Online Test Engine</div>
 
 <nav>
 <ul class="sf-menu" id="nav">
@@ -97,7 +97,7 @@ The institutes also provide a list of students that are eligible for the exam.</
 <p>We'd love to hear from you. Call us, <a href="#">email us</a> or complete our <a href="contact.php">contact form</a>.</p>
 </div>
 </div>
-<form id="signup">
+        <form id="signup" action="organizationdata.jsp">
 <h1>ORGANIZATION REGISTRATION</h1>
 
 <h1>Fields marked (*) are required</h1>

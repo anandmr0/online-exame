@@ -16,7 +16,7 @@
 <header>
 
 <!-- class="logo_colour", allows you to change the colour of the text -->
-<h2 align="center"><font color="black"><u>ONLINE TEST ENGINE</u></font></h2>
+<div id="headertitle">Online Test Engine</div>
 
 <nav>
 <ul class="sf-menu" id="nav">
@@ -85,60 +85,8 @@ The institutes also provide a list of students that are eligible for the exam.</
 <li><img width="706" height="270" src="mathproblem_3.jpg" alt="image two" /></li>
 <li><img width="706" height="270" src="pencils.jpg" alt="image three" /></li>
 </ul>
-<form id="signup">
-<h1>FINAL TEST</h1>
-
-<h1>Fields marked (*) are required</h1>
-
-<fieldset>
-<legend>Institute/Organization details</legend>
-
-<ol>
-<li>
-<label for="IOname">Institute/Organization Name *</label> 
-<input type="text" id="institutename" name="ioname" placeholder="Institute/Organization name" required />
-</li>
-<li>
-<label for="email">Institute/Organization Login Name *</label> 
-<input type="email" id="email" name="email" placeholder="Login Name" title="Please enter a valid email" required />
-<p class="validation01">
-<span class="invalid">Please enter a valid Login Name</span>
-<span class="valid">Thank you for entering a valid email</span>
-</p>
-</li>
-<li>
-<label for="sname">Subject Name *</label> 
-<input type="text" id="sname" name="sname" placeholder="e.g: Java" required="" />
-</li>
-
-</ol>
-</fieldset>
-<fieldset>
-<legend>Student Details</legend>
-<ol>		
-<li>
-<label for="username">Your Login name *</label>
-<input id="username" name="username" type="text" pattern=".{4,}" placeholder="Login Name" required="Enter Valid Login Name" />
-</li>
-<li>
-<label for="password">Password *</label>
-<input id="password" name="password" type="password" title="Minimum 8 characters, one number, one uppercase and one lowercase letter" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*" required /> 
-<p class="validation01">
-<span class="invalid">Minimum 8 characters, one number, one uppercase letter and one lowercase letter</span>
-<span class="valid">Your password meets our requirements, thank you.</span>
-</p>
-</li>
-<li>
-    
-</li>
-</ol>
-
-</fieldset>
-
-<input type="submit" value="Give Exam" style="background-color: #4b8df9; height: 30px; width: 65px;" />
-<input type="reset" value="Clear" style="background-color: #4b8df9;height: 30px; width: 65px;"/>
-
-</form>
+    <h1 align="center"> Thank You For Registration.....!</h1>
+    <h1 align="center">Your  Registration no:<%=request.getParameter("number")%></h2>
 </div>
 </div>
 <footer>

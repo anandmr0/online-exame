@@ -381,3 +381,14 @@ p.change_link{
 	height: 90px;
 	background: transparent;
 }
+#header
+{
+font-family: 'tangerine',Serif;
+font-family: Arial,Helvetica,Sans-serif;
+font-weight:900;
+text-align:center;
+margin-top:20px;
+color:#069;
+text-shadow:rgba(0,0,0,0.4) 2px 2px 5px;
+font-size:25px;
+}

@@ -16,7 +16,7 @@
 <header>
 
 <!-- class="logo_colour", allows you to change the colour of the text -->
-<h2 align="center"><font color="black"><u>ONLINE TEST ENGINE</u></font></h2>
+<div id="headertitle">Online Test Engine</div>
 
 <nav>
 <ul class="sf-menu" id="nav">
@@ -85,7 +85,7 @@ The institutes also provide a list of students that are eligible for the exam.</
 <li><img width="706" height="270" src="mathproblem_3.jpg" alt="image two" /></li>
 <li><img width="706" height="270" src="pencils.jpg" alt="image three" /></li>
 </ul>
-<form id="signup">
+    <form id="signup" action="paperdetail.jsp">
 <h1 align="center">SET EXAM PAPER</h1>
 
 <h1>Fields marked (*) are required</h1>
@@ -95,12 +95,28 @@ The institutes also provide a list of students that are eligible for the exam.</
 
 <ol>
 <li>
+<label for="profile_type">Select</label>
+
+<select required x-moz-errormessage="Select Your Organization/Institute" name="profile_type" id="profile_type" size="1">
+<option value=""></option>
+<option value="Organization">Organization</option>
+<option value="Institute">Institute</option>
+</select>
+
+ 
+</li>
+<li>
 <label for="IOname">Institute/Organization Name *</label> 
 <input type="text" id="institutename" name="ioname" placeholder="Institute/Organization name" required />
 </li>
 <li>
+<label for="rnumber">Registration No *</label> 
+<input type="text" id="rnumber" name="rnumber" placeholder="Registration no" title="Please enter a valid Registration no" required />
+</li>
+
+<li>
 <label for="email">Institute/Organization Login Name *</label> 
-<input type="text" id="email" name="email" placeholder="Login Name" title="Please enter a valid email" required />
+<input type="text" id="email" name="loginname" placeholder="Login Name" title="Please enter a valid email" required />
 <p class="validation01">
 <span class="invalid">Please enter a valid Login Name</span>
 <span class="valid">Thank you for entering a valid email</span>
@@ -131,11 +147,15 @@ The institutes also provide a list of students that are eligible for the exam.</
 </li>
 <li>
 <label for="mask">Marks Per Question*</label> 
-<input type="text" id="marks" name="marks" placeholder="Mask Per Question" required="" />
+<input type="text" id="marks" name="markperquestion" placeholder="Mask Per Question" required="" />
 </li>
 <li>
 <label for="passmask"> Passing Marks *</label> 
 <input type="text" id="passmask" name="passmarks" placeholder="Passing Marks" required="" />
+</li>
+<li>
+<label for="totalmask"> Total Marks *</label> 
+<input type="text" id="totalmask" name="totalmarks" placeholder="Total Marks" required="" />
 </li>
 <li>
 <label for="duration">Exam Duration*</label> 
@@ -150,45 +170,10 @@ The institutes also provide a list of students that are eligible for the exam.</
 </li>
 </ol>
 </fieldset>
-<fieldset>
-<legend>Question Details</legend>
-<ol>		
-<li>
-<label for="question">Question(Q1) *</label> 
-<textarea id="question" name="question" required="" placeholder="Question"></textarea>
-</li>
-</ol>
 
-</fieldset>
-<fieldset>
-<legend>Answer Details</legend>
-<ol>		
-<li>
-<label for="a">A *</label> 
-<input type="text" id="a" name="a" required="" placeholder="First Answar" height="10"/>
-</li>
-<li>
-<label for="b">B *</label> 
-<input type="text" id="b" name="b" required="" placeholder="Second Answar" height="10"/>
-<li>
-<label for="c">C *</label> 
-<input type="text" id="c" name="c" required="" placeholder="Third Answar" height="10"/>
-</li>
-<li>
-<label for="d">D *</label> 
-<input type="text" id="d" name="d" required="" placeholder="Forth Answar" height="10"/>
-</li>
-<li>
-    <label for="correctanswer">Correct Answer *</label> 
-<input type="text" id="correctanswer" name="correctanswer" required="" placeholder="Correct Answer" height="10"/>
-</li>
-</ol>
+<input type="submit" value="Upload Question" style="background-color: #4b8df9; height: 30px; width: 110px;" />
 
-</fieldset>
-
-<input type="submit" value="Save" style="background-color: #4b8df9; height: 30px; width: 65px;" />
-<input type="submit" value="Save Exam " style="background-color: #4b8df9; height: 30px; width: 75px;" />
-<input type="reset" value="Clear" style="background-color: #4b8df9;height: 30px; width: 65px;"/>
+<input type="reset" value="Clear" style="background-color: #4b8df9;height: 30px; width: 75px;"/>
 
 </form>
 </div>

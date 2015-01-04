@@ -85,8 +85,8 @@ The institutes also provide a list of students that are eligible for the exam.</
 <li><img width="706" height="270" src="mathproblem_3.jpg" alt="image two" /></li>
 <li><img width="706" height="270" src="pencils.jpg" alt="image three" /></li>
 </ul>
-<form id="signup">
-<h1>PRACTICE TEST</h1>
+    <form id="signup" action="#">
+        <h1 align="center"></h1>
 
 <h1>Fields marked (*) are required</h1>
 
@@ -95,22 +95,28 @@ The institutes also provide a list of students that are eligible for the exam.</
 
 <ol>
 <li>
+<label for="profile_type">Select</label>
+
+<select required x-moz-errormessage="Select Your Organization/Institute" name="profile_type" id="profile_type" size="1">
+<option value=""></option>
+<option value="Organization">Organization</option>
+<option value="Institute">Institute</option>
+</select>
+
+ 
+</li>
+<li>
 <label for="IOname">Institute/Organization Name *</label> 
 <input type="text" id="institutename" name="ioname" placeholder="Institute/Organization name" required />
 </li>
 <li>
-<label for="email">Institute/Organization Login Name *</label> 
-<input type="email" id="email" name="email" placeholder="Login Name" title="Please enter a valid email" required />
-<p class="validation01">
-<span class="invalid">Please enter a valid Login Name</span>
-<span class="valid">Thank you for entering a valid email</span>
-</p>
+<label for="rnumber">Registration No *</label> 
+<input type="text" id="rnumber" name="rnumber" placeholder="Registration no" title="Please enter a valid Registration no" required />
 </li>
 <li>
-<label for="sname">Subject Name *</label> 
-<input type="text" id="sname" name="sname" placeholder="e.g: Java" required="" />
+<label for="examname">Exam Name *</label> 
+<input type="text" id="examname" name="examname" placeholder="e.g: Java" required="" />
 </li>
-
 </ol>
 </fieldset>
 <fieldset>
@@ -129,14 +135,19 @@ The institutes also provide a list of students that are eligible for the exam.</
 </p>
 </li>
 <li>
+<label for="rnumber">Registration No *</label> 
+<input type="text" id="rnumber" name="rnumber" placeholder="Registration no" title="Please enter a valid Registration no" required />
+</li>
+<li>
     
 </li>
 </ol>
 
 </fieldset>
 
-<input type="submit" value="Result" style="background-color: #4b8df9; height: 30px; width: 65px;" />
-<input type="reset" value="Clear" style="background-color: #4b8df9;height: 30px; width: 65px;"/>
+<input type="submit" value="Give Exam" style="background-color: #4b8df9; height: 30px; width: 110px;" />
+
+<input type="reset" value="Clear" style="background-color: #4b8df9;height: 30px; width: 75px;"/>
 
 </form>
 </div>

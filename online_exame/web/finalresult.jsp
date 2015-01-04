@@ -16,7 +16,7 @@
 <header>
 
 <!-- class="logo_colour", allows you to change the colour of the text -->
-<h2 align="center"><font color="black"><u>ONLINE TEST ENGINE</u></font></h2>
+<div id="headertitle">Online Test Engine</div>
 
 <nav>
 <ul class="sf-menu" id="nav">
