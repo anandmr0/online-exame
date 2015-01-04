@@ -1,0 +1,13 @@
+1)user Module
+2)Class Master
+3)Subject Master
+4)Question Master
+5)Examination Master
+6)Take Examination
+7)Exam History
+8)Edite Profile
+9)Print Certificate
+10)Student Inquiry
+11)View Inquiry
+12)Manage User
+13)Reports

@@ -1,0 +1,3 @@
+tracert www.facebook.com
+shoutdown -i
+anotate shutdown

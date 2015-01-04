@@ -1,0 +1,213 @@
+1)WAP in java to accept 5 number from user and display greater and smaller no 
+2)Java Program to find that given number is Palindrome or not(accept no from user)
+
+3)Java Program to Reverse the Given Number
+4)Program to find whether entered character is a vowel or Consonant
+
+5)Java Program to Calculate the Sum of Digits of Given Number
+6)How to swap two numbers using only two variables
+
+7)Checking the Given Number is Armstrong or Not
+8)Concatenation of Two String in Java
+
+9)Calculate the Area of Circle | Java Program
+10)Calculate Circle Perimeter | Java Program
+
+11)To Find Whether Given Year is a Leap Year or not
+	program:
+		  
+	public class LeapYear
+	 {  
+    		public static void main(String[] args) {  
+        int year = Integer.parseInt(args[0]);  
+        boolean isLeapYear;  
+  
+        // divisible by 4  
+        isLeapYear = (year % 4 == 0);  
+  
+        // divisible by 4 and not 100  
+        isLeapYear = isLeapYear && (year % 100 != 0);  
+  
+        // divisible by 4 and not 100 unless divisible by 400  
+        isLeapYear = isLeapYear || (year % 400 == 0);  
+  
+        System.out.println(isLeapYear);  
+    }  
+}
+12)WAP in java to check wether the given no is prime no or not
+
+13) WAP Java to find the Factorial of a number Using Recursion
+
+14)WAP in java to print 3x3 matrix 
+15)Write a Java program to print same character on each line and having character printed in diagonal form. As shown below 
+	
+           *
+	     *
+	       *
+		 *
+		   *
+		     *
+
+16)Write a Java program to print same character on each line and having character increment with each line. As shown below : 
+
+* 
+** 
+*** 
+**** 
+***** 
+******
+
+17)Write a Java program to print same character on each line and having character printed in Square Shape form. As shown below : 
+
+*  *  *  *  *  * 
+*              *
+*              *
+*              *
+*  *  *  *  *  * 
+
+import java.util.Scanner;
+ 
+public class SquarePattern {
+ 
+    public static void main(String[] args) {
+ 
+        String pattern;
+        int noOfTimes;
+ 
+        Scanner scanner = new Scanner(System.in);
+ 
+        System.out.print("Enter the pattern to print : ");
+        pattern = scanner.nextLine();
+ 
+        System.out.print("Enter number of times it should get printed : ");
+        noOfTimes = scanner.nextInt();
+ 
+        for(int i=1; i<=noOfTimes; i++) {      
+             
+            System.out.println();
+ 
+            if(i==1 || i==noOfTimes) {
+       
+                for(int j=1; j<=noOfTimes; j++){
+                 
+                    System.out.print(pattern+" ");
+                 
+                }
+            }
+            else {
+                 
+                for(int k=1; k<=noOfTimes;k++) {
+                 
+                    if(k==1 || k == noOfTimes) {
+                     
+                        System.out.print(pattern + " ");
+                     
+                    }                   
+                    else {
+                      
+                        System.out.print("  ");
+                     
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+18)Java program to convert Fahrenheit to Celsius: This code does temperature conversion from Fahrenheit scale to Celsius scale.
+	import java.util.*;
+ 
+class FahrenheitToCelsius {
+  public static void main(String[] args) {
+    float temperatue;
+    Scanner in = new Scanner(System.in);      
+ 
+    System.out.println("Enter temperatue in Fahrenheit");
+    temperatue = in.nextInt();
+ 
+    temperatue = ((temperatue - 32)*5)/9;
+ 
+    System.out.println("Temperatue in Celsius = " + temperatue);
+  }
+}
+
+19)wap in java to reverses a string enter by user
+	
+	import java.util.*;
+ 
+class ReverseString
+{
+   public static void main(String args[])
+   {
+      String original, reverse = "";
+      Scanner in = new Scanner(System.in);
+ 
+      System.out.println("Enter a string to reverse");
+      original = in.nextLine();
+ 
+      int length = original.length();
+ 
+      for ( int i = length - 1 ; i >= 0 ; i-- )
+         reverse = reverse + original.charAt(i);
+ 
+      System.out.println("Reverse of entered string is: "+reverse);
+   }
+}
+
+20)Wap in java to compare to string
+	import java.util.Scanner;
+ 
+class CompareStrings
+{
+   public static void main(String args[])
+   {
+      String s1, s2;
+      Scanner in = new Scanner(System.in);
+ 
+      System.out.println("Enter the first string");
+      s1 = in.nextLine();
+ 
+      System.out.println("Enter the second string");
+      s2 = in.nextLine();
+ 
+      if ( s1.compareTo(s2) > 0 )
+         System.out.println("First string is greater than second.");
+      else if ( s1.compareTo(s2) < 0 )
+         System.out.println("First string is smaller than second.");
+      else   
+         System.out.println("Both strings are equal.");
+   }
+}
+
+21)wap in java to generate random number
+	import java.util.*;
+ 
+class RandomNumbers {
+  public static void main(String[] args) {
+    int c;
+    Random t = new Random();
+ 
+    // random integers in [0, 100]
+ 
+    for (c = 1; c <= 10; c++) {
+      System.out.println(t.nextInt(100));
+    }
+  }
+}
+
+22)wap in java to add two matrices
+23)wap in java to find transpose of a matrix of any order
+24)wap in java to print Floyd's triangle.
+	
+	1
+	2 3
+	4 5 6
+        7 8 9 10
+        11 12 13 14 15
+
+ 
+ 
+
+
+
